@@ -1,0 +1,94 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base"
+    ,"eslint:recommended"
+    ,"plugin:react/recommended"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+      ,"arrowFunctions": true
+      ,"binaryLiterals": true
+      ,"blockBindings": true
+      ,"classes": true
+      ,"defaultParams": true
+      ,"destructuring": true
+      ,"forOf": true
+      ,"generators": true
+      ,"modules": true
+      ,"objectLiteralComputedProperties": true
+      ,"objectLiteralDuplicateProperties": true
+      ,"objectLiteralShorthandMethods": true
+      ,"objectLiteralShorthandProperties": true
+      ,"octalLiterals": true
+      ,"regexUFlag": true
+      ,"regexYFlag": true
+      ,"spread": true
+      ,"rest": true
+      ,"superInFunctions": true
+      ,"templateStrings": true
+      ,"unicodeCodePointEscapes": true
+      ,"globalReturn": true
+      ,"experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+    ,"node": true
+    ,"mocha": true
+    ,"es6": true
+  },
+  "rules": {
+    "indent": [2, 2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 }, "SwitchCase": 1 }]
+    ,"quotes": [ 2, "single" ]
+    ,"linebreak-style": [ 2, "unix" ]
+    ,"semi": [ 2, "never" ]
+    ,"no-console": 1
+    ,"prefer-const": 1
+    ,"no-var": 1
+    ,"prefer-arrow-callback": 1
+    ,"prefer-spread": 1
+    ,"no-unused-vars": 0 // see https://github.com/babel/babel-eslint/issues/21
+    ,"no-const-assign": 2
+    ,"no-class-assign": 2
+    ,"no-dupe-class-members": 2
+    ,"react/jsx-boolean-value": 1
+    ,"react/jsx-no-undef": 1
+    ,"jsx-quotes": 1
+    ,"react/jsx-sort-props": 1
+    ,"react/jsx-uses-react": 1
+    ,"react/jsx-uses-vars": 1
+    ,"react/no-did-mount-set-state": 1
+    ,"react/no-did-update-set-state": 1
+    ,"react/no-multi-comp": 1
+    ,"react/no-unknown-property": 1
+    ,"react/prop-types": 1
+    ,"react/react-in-jsx-scope": 1
+    ,"react/self-closing-comp": 1
+    ,"react/sort-comp": 1
+    ,"react/sort-prop-types": 1
+    ,"react/jsx-wrap-multilines": 1
+    ,"strict": 0
+    // overwrite airbnb-base
+    ,"global-require": 0
+    ,"comma-dangle": [2, "only-multiline"]
+    ,"max-len": [2, 150, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": true
+    }]
+    ,"import/no-named-as-default": 0
+    ,"import/prefer-default-export": 0
+    ,"import/no-named-as-default-member": 0
+    ,"no-underscore-dangle": [2, { "allowAfterThis": false, "allow": ["__Rewire__", "__ResetDependency__"] }]
+    ,"import/no-dynamic-require": 0
+    ,"import/no-extraneous-dependencies": 0
+    ,"import/newline-after-import": 0
+    ,"import/first": 0
+  }
+}

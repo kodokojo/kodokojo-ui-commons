@@ -1,0 +1,23 @@
+{
+  "env": {
+    "development": {
+      "presets": ["es2015", "react", "stage-0", "react-hmre"],
+      "plugins": [
+        "transform-object-rest-spread"
+      ]
+    },
+    "test": {
+      "presets": ["es2015", "react", "stage-0"],
+      "plugins": [
+        "transform-object-rest-spread",
+        "babel-plugin-rewire"
+      ]
+    },
+    "production": {
+      "presets": ["es2015", "react", "stage-0"],
+      "plugins": [
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}
