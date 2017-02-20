@@ -1,0 +1,44 @@
+@import '../../../styles/meta';
+
+.navigation {
+  height: 70px;
+  align-items: center;
+  box-shadow: none;
+  padding: .1em 0 0 0;
+}
+
+.label {
+  font-weight: $font-weight-thin;
+  font-size: $font-size-default;
+  text-transform: none;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  // add automatic gradation for breadcrumb labels
+  &:nth-of-type(1) {
+    color: $color-font-2;
+  }
+  &:nth-of-type(2) {
+    color: $color-font-3;
+  }
+  &:nth-of-type(3) {
+    color: $color-font-4;
+  }
+  &:last-of-type {
+    opacity: 1;
+    color: $color-font-6;
+  }
+  &:first-of-type {
+    font-size: $font-size-larger;
+    padding-top: 1.4rem;
+  }
+  &.disabled {
+    font-size: $font-size-default;
+    opacity: 1;
+  }
+}
+
+.pointer {
+  background-color: $color-secondary-1;
+  transition-property: left, width, background-color;
+}

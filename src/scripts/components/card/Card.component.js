@@ -34,6 +34,7 @@ export class Card extends React.Component {
   static propTypes = {
     children: React.PropTypes.oneOfType([
       React.PropTypes.arrayOf(React.PropTypes.element),
+      React.PropTypes.arrayOf(React.PropTypes.node),
       React.PropTypes.element,
       React.PropTypes.string,
       React.PropTypes.node
