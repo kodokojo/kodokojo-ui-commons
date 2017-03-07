@@ -32,13 +32,7 @@ import cardTheme from './card.scss'
 export class Card extends React.Component {
 
   static propTypes = {
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.arrayOf(React.PropTypes.element),
-      React.PropTypes.arrayOf(React.PropTypes.node),
-      React.PropTypes.element,
-      React.PropTypes.string,
-      React.PropTypes.node
-    ]),
+    children: React.PropTypes.any,
     className: React.PropTypes.string,
     merged: React.PropTypes.bool,
     primary: React.PropTypes.bool,
