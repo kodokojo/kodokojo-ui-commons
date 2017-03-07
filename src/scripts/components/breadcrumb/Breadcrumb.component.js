@@ -36,9 +36,9 @@ const Breadcrumb = (props) => {
   const { formatMessage } = props.intl
 
   let theme
-  const activeItem = find(items, o => isNumber(o.active))
-  const activeColor = activeItem ? activeItem.active : 0
-  switch (activeColor) {
+  const variantItem = find(items, o => isNumber(o.variant))
+  const variantColor = variantItem ? variantItem.variant : 0
+  switch (variantColor) {
     default:
     case 0:
       theme = breadcrumbColor0Theme
@@ -63,7 +63,7 @@ const Breadcrumb = (props) => {
       { items.length > 0 &&
         items.map((tab, index, array) => (
           <ToolboxTab
-            active={ tab.active}
+            active={ tab.active }
             activeClassName={tab.activeClassName }
             className={ tab.className }
             disabled={ tab.disabled }
