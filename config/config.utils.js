@@ -26,7 +26,7 @@ configUtils.getVersion = () => {
     const npmVersion = spawn('npm', ['version', '--json'])
 
     npmVersion.stdout.on('data', (data) => {
-      resolve(`${JSON.parse(data)['kodokojo-ui']}`)
+      resolve(`${JSON.parse(data)['kodokojo-ui-commons']}`)
     })
   })
 }
