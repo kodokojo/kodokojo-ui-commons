@@ -16,7 +16,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+@import '~react-toolbox/components/tabs/theme';
 @import '../../../styles/meta';
+
+.tabs {
+  margin-left: 1rem;
+}
 
 .navigation {
   height: 70px;
