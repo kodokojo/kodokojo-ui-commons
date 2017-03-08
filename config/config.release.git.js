@@ -31,8 +31,7 @@ function addVersionFiles() {
   return new Promise((resolve, reject) => {
     const files = [
       'README.md',
-      'package.json',
-      'npm-shrinkwrap.json'
+      'package.json'
     ]
     const gitAdd = spawn('git', ['add'].concat(files))
 
