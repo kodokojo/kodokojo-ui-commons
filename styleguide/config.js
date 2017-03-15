@@ -5,6 +5,7 @@ function loadStories() {
   require('../src/scripts/components/avatar/Avatar.component.story')
   require('../src/scripts/components/appBar/AppBar.component.story')
   require('../src/scripts/components/button/Button.component.story')
+  require('../src/scripts/components/dropdown/Dropdown.component.story')
   require('../src/scripts/components/button/IconButton.component.story')
   require('../src/scripts/components/card/Card.component.story')
   require('../src/scripts/components/checkbox/Checkbox.component.story')

@@ -16,15 +16,21 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export const APP_BAR = 'KKAppBar'
-export const CARD = 'KKCard'
-export const CARD_CONTAINER = 'KKCardContainer'
-export const CARD_CONTENT = 'KKCardContent'
-export const CONTENT = 'KKContent'
-export const DIALOG = 'KKDialog'
-export const DROPDOWN = 'KKDropdown'
-export const LAYOUT = 'KKLayout'
-export const NAV = 'KKNav'
-export const PAGE = 'KKPage'
-export const PANEL = 'KKPanel'
-export const PARAGRAPH = 'KKParagraph'
+import React from 'react'
+import { themr } from 'react-css-themr'
+
+// UI library component
+import { dropdownFactory as toolboxDropdownFactory } from 'react-toolbox/lib/dropdown/Dropdown'
+
+// component
+import { DROPDOWN } from '../../commons/identifiers'
+import '../../../styles/_commons.less'
+import dropdownTheme from './dropdown.scss'
+import Input from '../input/Input.component'
+
+/**
+ * UI: Dropdown component
+ *
+ */
+const Dropdown = toolboxDropdownFactory(Input)
+export default themr(DROPDOWN, dropdownTheme)(Dropdown)

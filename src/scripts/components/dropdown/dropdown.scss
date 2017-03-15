@@ -1,0 +1,112 @@
+/**
+ * Kodo Kojo - Software factory done right
+ * Copyright © 2017 Kodo Kojo (infos@kodokojo.io)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@import '~react-toolbox/components/dropdown/theme';
+@import '~react-toolbox/components/input/config';
+@import '../../../styles/meta';
+
+// theme variables
+$input-padding: 0;
+$input-field-padding: .2 * $unit;
+
+.dropdown {
+  &.disabled > .value {
+    &:after {
+      pointer-events: auto;
+      cursor: not-allowed;
+      border-top-color: $color-primary-4;
+    }
+  }
+}
+
+.field {
+  &.errored {
+    > .label {
+      color: $color-ternary-1;
+    }
+    > .templateValue {
+      border-bottom: 1px solid $color-ternary-1;
+    }
+  }
+  &.disabled {
+    > .templateValue {
+      border-bottom-style: dotted;
+      opacity: .7;
+    }
+  }
+}
+
+.templateValue {
+  position: relative;
+  min-height: 5px;
+  padding: 0;
+  color: $color-font-6;
+  font-weight: $font-weight-light;
+  background-color: $input-text-background-color;
+  border-bottom: 1px solid $color-primary-5;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-thin;
+  font-size: $font-size-normal;
+  color: $color-font-5;
+}
+
+.error {
+  margin-bottom: - $input-underline-height;
+  font-size: $font-size-normal - $input-field-padding;
+  line-height: $input-underline-height;
+  color: $color-ternary-1;
+}
+
+.value {
+  &:after {
+    $size: 6px;
+    top: 30%;
+    border-top: $size solid $color-font-5;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+  }
+  > * {
+    &:hover {
+      background-color: $color-primary-2;
+    }
+    &.selected {
+      color:  $color-primary-2;
+    }
+  }
+}
+
+.values {
+  padding: 0;
+  margin-top: -1rem;
+  background-color: $color-primary-1;
+  border-radius: $radius-standard;
+  > * {
+    padding: .5rem;
+    &:hover {
+      background-color: $color-primary-4;
+    }
+    &.selected {
+      color: $color-font-4;
+    }
+  }
+}
