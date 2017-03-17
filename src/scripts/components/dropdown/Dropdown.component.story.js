@@ -22,16 +22,16 @@ import { storiesOf, action } from '@kadira/storybook'
 
 // contexte
 const albums = [
-  { value: 1, label: 'Radiohead' },
-  { value: 2, label: 'Joy Division' },
-  { value: 3, label: 'Amon Tobin' },
-  { value: 4, label: 'Pixies' }
+  { value: 1, labelText: 'Radiohead' },
+  { value: 2, labelText: 'Joy Division' },
+  { value: 3, labelText: 'Amon Tobin' },
+  { value: 4, labelText: 'Pixies' }
 ]
 import en from '../../i18n/en'
 
 // component to story
 import Dropdown from './Dropdown.component'
-import { dropdownItemDefault } from './dropdownItem.component'
+import { DropdownItemDefault } from './DropdownItem.component'
 
 storiesOf('Dropdown', module)
   .addDecorator((story) => (
@@ -47,7 +47,7 @@ storiesOf('Dropdown', module)
       label="Select something"
       onChange={ () => action('change value') }
       source={ albums }
-      template={ dropdownItemDefault }
+      template={ DropdownItemDefault }
     />
   ))
   .add('with value', () => (
@@ -56,7 +56,7 @@ storiesOf('Dropdown', module)
       label="Select something"
       onChange={ () => action('change value') }
       source={ albums }
-      template={ dropdownItemDefault }
+      template={ DropdownItemDefault }
       value={ 1 }
     />
   ))
@@ -67,7 +67,7 @@ storiesOf('Dropdown', module)
       label="Select something"
       onChange={ () => action('change value') }
       source={ albums }
-      template={ dropdownItemDefault }
+      template={ DropdownItemDefault }
       value={ 1 }
       />
   ))
@@ -78,7 +78,7 @@ storiesOf('Dropdown', module)
       onChange={ () => action('change value') }
       required
       source={ albums }
-      template={ dropdownItemDefault }
+      template={ DropdownItemDefault }
     />
   ))
   .add('disabled', () => (
@@ -88,6 +88,6 @@ storiesOf('Dropdown', module)
       label="Select something"
       onChange={ () => action('change value') }
       source={ albums }
-      template={ dropdownItemDefault }
+      template={ DropdownItemDefault }
     />
   ))

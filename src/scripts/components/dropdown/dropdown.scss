@@ -25,6 +25,9 @@ $input-padding: 0;
 $input-field-padding: .2 * $unit;
 
 .dropdown {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row nowrap;
   &.disabled > .value {
     &:after {
       pointer-events: auto;
@@ -35,6 +38,7 @@ $input-field-padding: .2 * $unit;
 }
 
 .field {
+  width: 100%;
   &.errored {
     > .label {
       color: $color-ternary-1;
@@ -68,6 +72,10 @@ $input-field-padding: .2 * $unit;
   font-weight: $font-weight-thin;
   font-size: $font-size-normal;
   color: $color-font-5;
+  .required {
+    color: $color-font-5;
+  }
+
 }
 
 .error {
@@ -87,7 +95,7 @@ $input-field-padding: .2 * $unit;
   }
   > * {
     &:hover {
-      background-color: $color-primary-2;
+      background-color: inherit;
     }
     &.selected {
       color:  $color-primary-2;
@@ -97,7 +105,7 @@ $input-field-padding: .2 * $unit;
 
 .values {
   padding: 0;
-  margin-top: -1rem;
+  color: $color-font-6;
   background-color: $color-primary-1;
   border-radius: $radius-standard;
   > * {

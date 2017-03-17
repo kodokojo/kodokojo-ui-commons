@@ -21,12 +21,12 @@ import React from 'react'
 // component
 import dropdownItemTheme from './dropdownItem.scss'
 
-export const dropdownItemDefault = (item) => (
+export const DropdownItemDefault = (item) => (
   <div className={ dropdownItemTheme.item }>
     <div className={ dropdownItemTheme['item-content'] }>
-      <strong>{ item.label }</strong>
+      <strong>{ item.labelText }</strong>
     </div>
   </div>
 )
 
-export default dropdownItemDefault
+export default DropdownItemDefault
