@@ -71,13 +71,18 @@ const Breadcrumb = (props) => {
             icon={ tab.icon }
             key={ index }
             label={
-              '\u00A0' +
-              ( tab.labelKey ? formatMessage({ id: tab.labelKey }) : tab.labelText ) +
-              (
-                index < array.length - 1 ?
-                  ' /' :
-                  ''
-              )
+              <div>
+                /
+                <span>{'\u00A0'}</span>
+                {
+                  ( tab.labelKey ? formatMessage({ id: tab.labelKey }) : tab.labelText ) +
+                  (
+                    index < array.length - 1 ?
+                      '\u00A0' :
+                      ''
+                  )
+                }
+              </div>
             }
             onActive={ tab.onActiveItem }
             onClick={ tab.onClickItem }
