@@ -1,6 +1,6 @@
 {
   "name": "kodokojo-ui-commons",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Kodo Kojo UI Commons",
   "main": "./src/scripts/index.js",
   "repository": {
