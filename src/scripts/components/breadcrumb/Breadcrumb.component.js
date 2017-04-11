@@ -75,7 +75,7 @@ const Breadcrumb = (props) => {
                 /
                 <span>{'\u00A0'}</span>
                 {
-                  ( tab.labelKey ? formatMessage({ id: tab.labelKey }) : tab.labelText ) +
+                  ( tab.labelText ? tab.labelText : formatMessage({ id: tab.labelKey }) ) +
                   (
                     index < array.length - 1 ?
                       '\u00A0' :
@@ -86,7 +86,7 @@ const Breadcrumb = (props) => {
             }
             onActive={ tab.onActiveItem }
             onClick={ tab.onClickItem }
-            title={ ( tab.titleKey ? formatMessage({ id: tab.titleKey }) : tab.titleText ) }
+            title={ ( tab.titleText ? tab.titleText : formatMessage({ id: tab.titleKey }) ) }
           >
             { tab.content }
           </ToolboxTab>
