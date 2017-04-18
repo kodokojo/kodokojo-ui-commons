@@ -18,9 +18,11 @@
 
 import React from 'react'
 import { Provider } from 'react-redux'
-import { storiesOf, action } from '@kadira/storybook'
+import { IntlProvider } from 'react-intl'
+import { storiesOf } from '@kadira/storybook'
 
 // contexte
+import en from '../../i18n/en'
 import configureStore from '../../store/configureStore'
 
 // component to story
@@ -32,27 +34,33 @@ const store = configureStore(initialState)
 
 storiesOf('Breadcrumb', module)
   .add('default', () => (
-    <Provider store={store}>
-      <Breadcrumb
-        active={ 0 }
-        items={ [
-          {
-            labelKey: '',
-            route: ''
-          },
-          {
-            labelKey: 'projects-label',
-            route: '#projects',
-          },
-          {
-            labelText: 'Kodo Kojo',
-            disabled: true
-          },
-          {
-            labelKey: '',
-            route: ''
-          }
-        ] }
-      />
-    </Provider>
+    <IntlProvider locale="en" messages={ en }>
+      <Provider store={store}>
+        <Breadcrumb
+          active={ 0 }
+          items={ [
+            {
+              labelKey: 'organisation-label',
+              route: '',
+              titleKey: 'organisation-label'
+            },
+            {
+              labelKey: 'projects-label',
+              route: '#projects',
+              titleKey: 'projects-label'
+            },
+            {
+              labelText: 'Kodo Kojo',
+              disabled: true,
+              titleText: 'Kodo Kojo'
+            },
+            {
+              labelKey: 'menu',
+              route: '',
+              titleText: 'menu'
+            }
+          ] }
+        />
+      </Provider>
+    </IntlProvider>
   ))
