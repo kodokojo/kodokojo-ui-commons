@@ -2,6 +2,7 @@ import { configure } from '@kadira/storybook'
 
 function loadStories() {
   // ui
+  require('../src/scripts/components/autocomplete/Autocomplete.component.story')
   require('../src/scripts/components/avatar/Avatar.component.story')
   require('../src/scripts/components/appBar/AppBar.component.story')
   require('../src/scripts/components/button/Button.component.story')
